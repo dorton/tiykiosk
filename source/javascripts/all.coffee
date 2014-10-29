@@ -1,6 +1,5 @@
 #= require reveal.js/lib/js/head.min
 #= require reveal.js/js/reveal
-#= require_tree .
 
 Reveal.initialize
   width: "90%"
