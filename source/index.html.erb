@@ -5,38 +5,39 @@ title: Welcome to Middleman
 
   <!-- Any section element inside of this container is displayed as a slide -->
   <div class="slides">
-    <section>
-      <h1>TIY Slide Deck</h1>
-      <h3>HTML Presentations Made Easy using Reveal.js</h3>
-      <p>
-        <small>Reveal.js by <a href="http://hakim.se">Hakim El Hattab</a> /
-        TIY theme by Clinton Dreisbach</small>
-      </p>
-    </section>
-    <section data-markdown>
-      ## I can do Markdown!
 
-      ```ruby
-      string = "tomorrow"
-      fixnum = 0
-      float  = 0.00
-      array  = Array.new
-      hash   = {"test" => "test"}
-      regexp = /[abc]/
+    <!-- Slide 1 -->
+				<section>
+					<h2><%= Date.today.strftime("%A, %b %d") %></h2>
 
-      # This is a comment
-      class Person
-        attr_accessor :name
+					<img src="/images/logo_big.png" alt="" />
 
-        def initialize(attributes = {})
-          @name = attributes[:name]
-        end
+				</section>
 
-        def self.greet
-          "hello"
-        end
-      end
-      ```
-    </section>
+<!-- Demo Day Slide -->
+
+		<section>
+			<h2>Welcome to Demo Day!</h2>
+
+			<h3>See all projects at</h3>
+			<h3>theironyarddemoday.com</h3>
+
+		</section>
+
+		<section>
+			<h2>Congratulations Students!</h2>
+
+			<h3>You all are amazing.</h3>
+			<h3>We can't wait to see where you go from here!</h3>
+
+		</section>
+
+		<section>
+			<div id="images"></div>
+		</section>
+
+
+
+
   </div>
 </div>

@@ -4,10 +4,13 @@
 Reveal.initialize
   width: "90%"
   height: "100%"
-  controls: true
-  progress: true
+  controls: false
+  progress: false
   history: true
   center: true
+  autoSlide: 8000
+  loop: true
+  autoSlideStoppable: false
   theme: Reveal.getQueryHash().theme # available themes are in /css/theme
   transition: Reveal.getQueryHash().transition or "default" # default/cube/page/concave/zoom/linear/fade/none
 
