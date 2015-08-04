@@ -1,3 +1,26 @@
+require 'ostruct'
+require "json"
+require 'open-uri'
+require 'date'
+
+helpers do
+
+    def fetch_meetups
+        json = open("https://api.meetup.com/2/events?&sign=true&photo-host=public&venue_id=23753432&page=20&key=326e493f58383976434f5963243a5e&callback=?").read
+        JSON.parse(json)["results"].map do |hash|
+          OpenStruct.new(hash)
+        end
+    end
+
+    def all_meetups
+      @all_meetups ||= fetch_meetups
+    end
+
+
+
+end
+
+
 ###
 # Compass
 ###
@@ -72,7 +95,7 @@ end
 activate :deploy do |deploy|
   deploy.method = :git
   # Optional Settings
-  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+  # deploy.remote   = 'git@github.com:dorton/tiykiosk.git' # remote name or git url, default: origin
   # deploy.branch   = 'custom-branch' # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
   # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`

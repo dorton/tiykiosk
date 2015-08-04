@@ -17,7 +17,7 @@ Reveal.initialize
   progress: false
   history: true
   center: true
-  autoSlide: 8000
+  # autoSlide: 8000
   loop: true
   autoSlideStoppable: false
   theme: Reveal.getQueryHash().theme # available themes are in /css/theme

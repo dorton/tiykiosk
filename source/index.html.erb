@@ -9,10 +9,15 @@ title: Welcome to Middleman
     <!-- Slide 1 -->
 				<section>
 					<h2><div id='today'></div></h2>
-
 					<img src="/images/logo_big.png" alt="" />
 
 				</section>
+
+
+            <% all_meetups.each do |meetup| %>
+              <%= partial "meetup", locals: {meetup: meetup} %>
+            <% end %>
+
 
 
 
