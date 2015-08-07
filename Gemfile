@@ -11,3 +11,7 @@ gem 'middleman-deploy', '~> 1.0'
 gem 'rails-assets-reveal.js'
 
 gem 'momentjs-middleman', '~> 2.6.1'
+
+gem 'mechanize'
+
+gem 'google-drive'

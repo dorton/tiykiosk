@@ -2,6 +2,11 @@ require 'ostruct'
 require "json"
 require 'open-uri'
 require 'date'
+require 'active_support/all'
+require 'mechanize'
+require 'google/api_client'
+require 'google_drive'
+
 
 helpers do
 
@@ -16,6 +21,40 @@ helpers do
       @all_meetups ||= fetch_meetups
     end
 
+    def meetups_this_week
+      all_meetups.select {|t| t["time"] >= Time.now.beginning_of_week.to_i*1000 && Time.now.end_of_week.to_i*1000 >= t["time"] }
+    end
+
+
+    def comic_url
+      url = 'http://www.commitstrip.com/en/'
+      agent = Mechanize.new
+      page = agent.get(url)
+      page.at(".entry-content img")['src']
+    end
+
+    def fetch_speakers
+      json = open("http://localhost:3000/api/v1/speakers").read
+      JSON.parse(json)["speakers"].map do |hash|
+        OpenStruct.new(hash)
+      end
+    end
+
+    # def all_speakers
+    #   data.responses.select { |t| t["date"] >= Time.now.beginning_of_week.strftime('%m/%d/%Y') && Time.now.end_of_week.strftime('%m/%d/%Y') >= t["date"]}.sort_by {|date| date.date}
+    # end
+
+    def all_speakers
+      @all_speakers ||= fetch_speakers
+    end
+
+    def this_week_speaker
+      all_speakers.select { |t| t["date"] >= Time.now.beginning_of_week.strftime('%m/%d/%Y') && Time.now.end_of_week.strftime('%m/%d/%Y') >= t["date"]}.sort_by {|date| date.date}
+    end
+
+    # def this_week_speaker
+    #   all_speakers.select { |t| t["date"] >= Time.now.beginning_of_week && Time.now.end_of_week >= t["date"]}
+    # end
 
 
 end
