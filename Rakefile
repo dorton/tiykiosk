@@ -1,7 +1,5 @@
-task :deploy do
-
-
-       system("middleman build")
-       system("middleman deploy")
-
+namespace :assets do
+  task :precompile do
+    sh 'middleman build'
+  end
 end

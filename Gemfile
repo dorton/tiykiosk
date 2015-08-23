@@ -15,3 +15,7 @@ gem 'momentjs-middleman', '~> 2.6.1'
 gem 'mechanize'
 
 gem 'google-drive'
+
+gem 'rack-contrib'
+
+gem "thin"

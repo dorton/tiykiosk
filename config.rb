@@ -49,7 +49,7 @@ helpers do
     end
 
     def this_week_speaker
-      all_speakers.select { |t| t["date"] >= Time.now.beginning_of_week.strftime('%m/%d/%Y') && Time.now.end_of_week.strftime('%m/%d/%Y') >= t["date"]}.sort_by {|date| date.date}
+      all_speakers.select { |t| t["date"] >= Time.now.beginning_of_week(start_day = :sunday).strftime('%m/%d/%Y') && Time.now.end_of_week(end_day = :saturday).strftime('%m/%d/%Y') >= t["date"]}.sort_by {|date| date.date}
     end
 
     # def this_week_speaker
