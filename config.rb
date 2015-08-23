@@ -22,7 +22,7 @@ helpers do
     end
 
     def meetups_this_week
-      all_meetups.select {|t| t["time"] >= Time.now.beginning_of_week.to_i*1000 && Time.now.end_of_week.to_i*1000 >= t["time"] }
+      all_meetups.select {|t| t["time"] >= Time.now.beginning_of_week(start_day = :sunday).to_i*1000 && Time.now.end_of_week(end_day = :saturday).to_i*1000 >= t["time"] }
     end
 
 

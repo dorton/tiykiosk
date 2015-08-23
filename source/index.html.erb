@@ -25,7 +25,7 @@ title: TIY Houston Announcements
 <!-- Meetups Slide If Any -->
     <% unless meetups_this_week.empty? %>
       <section>
-        <h2>Meetups @TIY This Week</h2>
+        <h3>Meetups @TIY This Week</h3>
         <ul>
           <% meetups_this_week.each do |meetup| %>
               <%= partial "meetup", locals: {meetup: meetup} %>
