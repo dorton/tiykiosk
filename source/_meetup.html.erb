@@ -1,6 +1,10 @@
 
+<section>
+  <h3>Meetups @TIY This Week</h3>
+  <h4><%= meetup.group.name %></h4>
+  <h5><%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %></h5>
 
-<h4><%= meetup.group.name %></h4>
-<h5><%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %></h5>
+  <em><%= meetup.name %></em>
 
-<em><%= meetup.name %></em>
+  <em><%= meetup.description %></em>
+</section>
