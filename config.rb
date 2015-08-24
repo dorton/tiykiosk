@@ -12,9 +12,7 @@ helpers do
 
     def fetch_meetups
         json = open("https://api.meetup.com/2/events?&sign=true&photo-host=public&venue_id=23753432&page=20&key=326e493f58383976434f5963243a5e&callback=?").read
-        JSON.parse(json)["results"].map do |hash|
-          OpenStruct.new(hash)
-        end
+        JSON.parse(json, object_class: OpenStruct)["results"]
     end
 
     def all_meetups
