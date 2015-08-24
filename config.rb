@@ -111,7 +111,7 @@ end
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
-set :images_dir, 'images'
+set :images_dir, 'tiykiosk/images'
 
 # Build-specific configuration
 configure :build do
@@ -128,7 +128,7 @@ configure :build do
   # activate :relative_assets
 
   # Or use a different image path
-  set :http_prefix, "/tiykiosk/"
+  #set :http_prefix, "/tiykiosk/"
 end
 
 activate :deploy do |deploy|
