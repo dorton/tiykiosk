@@ -1893,7 +1893,7 @@ html * {
  *********************************************/
 /* line 48, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 body {
-  background-image: url(/images/bg1.png);
+  background-image: url(/tiykiosk/images/bg1.png);
   background-color: #303030;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1906,7 +1906,7 @@ body {
   font-weight: normal;
   letter-spacing: -0.02em;
   color: #f5f5f5;
-  background: url(/images/logo_small.png) no-repeat bottom 10px right 10px; }
+  background: url(/tiykiosk/images/logo_small.png) no-repeat bottom 10px right 10px; }
 
 /* line 65, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 ::selection {
