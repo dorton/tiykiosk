@@ -26,11 +26,11 @@ title: TIY Houston Announcements
     <% unless meetups_this_week.empty? %>
       <section>
         <h3>Meetups @TIY This Week</h3>
-        <ul>
+
           <% meetups_this_week.each do |meetup| %>
               <%= partial "meetup", locals: {meetup: meetup} %>
           <% end %>
-        </ul>
+        
       </section>
     <% end %>
 

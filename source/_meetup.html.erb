@@ -1,8 +1,6 @@
 
 
-  <li>
-    <%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %> - <%= meetup.group.name %>
-    <br>
-    <%= meetup.name %>
+<h4><%= meetup.group.name %></h4>
+<h5><%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %></h5>
 
-  </li>
+<em><%= meetup.name %></em>
