@@ -33,9 +33,7 @@ helpers do
 
     def fetch_speakers
       json = open("https://tiyspeakers.herokuapp.com/api/v1/speakers").read
-      JSON.parse(json)["speakers"].map do |hash|
-        OpenStruct.new(hash)
-      end
+      JSON.parse(json, object_class: OpenStruct)["speakers"]
     end
 
     # def all_speakers
