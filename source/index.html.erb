@@ -22,12 +22,20 @@ title: TIY Houston Announcements
 
 
 
-<!-- Meetups Slide If Any -->
+<!-- Meetups at TIY Slide If Any -->
     <% unless meetups_this_week.empty? %>
           <% meetups_this_week.each do |meetup| %>
               <%= partial "meetup", locals: {meetup: meetup} %>
           <% end %>
     <% end %>
+
+<!-- Meetups worth going this weel If Any -->
+
+<% unless meetups_worth_this_week.empty? %>
+      <% meetups_worth_this_week.each do |meetup| %>
+          <%= partial "meetupworthit", locals: {meetup: meetup} %>
+      <% end %>
+<% end %>
 
 <!-- Speakers -->
 

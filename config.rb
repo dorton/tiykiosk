@@ -23,6 +23,19 @@ helpers do
       all_meetups.select {|t| t["time"] >= Time.now.beginning_of_week(start_day = :sunday).to_i*1000 && Time.now.end_of_week(end_day = :saturday).to_i*1000 >= t["time"] }
     end
 
+    def fetch_meetups_worth_going
+      json = open("https://api.meetup.com/2/events?member_id=100501792&offset=0&format=json&limited_events=False&photo-host=public&page=20&fields=&order=time&desc=false&status=upcoming&sig_id=100501792&sig=a16f1f16f21e97938877eb5d4bb2a1399739a0bb").read
+      JSON.parse(json, object_class: OpenStruct)["results"]
+    end
+
+    def all_meetups_worth_going
+      @meetups_worth ||= fetch_meetups_worth_going
+    end
+
+    def meetups_worth_this_week
+      all_meetups_worth_going.select {|t| t["time"] >= Time.now.beginning_of_week(start_day = :sunday).to_i*1000 && Time.now.end_of_week(end_day = :saturday).to_i*1000 >= t["time"] }
+    end
+
 
     def comic_url
       url = 'http://www.commitstrip.com/en/'
