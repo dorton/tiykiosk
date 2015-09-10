@@ -41,7 +41,10 @@ helpers do
       url = 'http://www.commitstrip.com/en/'
       agent = Mechanize.new
       page = agent.get(url)
-      page.at(".entry-content img")['src']
+
+      detail_page = agent.click page.at(".excerpts .excerpt a")
+      detail_page.at(".entry-content img")['src']
+
     end
 
     def fetch_speakers
