@@ -5,6 +5,6 @@
 <br>
 <br>
   <h4><%= meetup.group.name %></h4>
-  <h5><%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %> @ <%= meetup.venue.name %></h5>
+  <h5><%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %> @ <% if meetup.venue.nil? %> <%= "TBD" %> <% else %> <%= meetup.venue.name %><% end %></h5>
 <br>
 </section>
