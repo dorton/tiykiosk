@@ -1893,22 +1893,24 @@ html * {
  *********************************************/
 /* line 48, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 body {
-  background-image: url(/tiykiosk/images/bg1.png);
   background-color: #303030;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; }
+  background-position: center;
+  /* background-image: url(/images/bg1.png); */
+  background-image: url(/tiykiosk/images/bg1.png); }
 
-/* line 56, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 58, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal {
   font-family: "PT Serif", serif;
   font-size: 46px;
   font-weight: normal;
   letter-spacing: -0.02em;
   color: #f5f5f5;
-  background: url(/tiykiosk/images/logo_small.png) no-repeat bottom 10px right 10px; }
+  background: url(/tiykiosk/images/logo_small.png) no-repeat bottom 10px right 10px;
+  /* background: url(/images/logo_small.png) no-repeat bottom 10px right 10px; */ }
 
-/* line 65, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 69, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 ::selection {
   color: #fff;
   background: #d381c3;
@@ -1917,7 +1919,7 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
-/* line 75, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 79, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -1933,18 +1935,18 @@ body {
   text-transform: none;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
-/* line 93, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 97, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal h1 {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 /*********************************************
  * CODE
  *********************************************/
-/* line 101, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 105, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal code {
   font-family: "Ubuntu Mono", monospace; }
 
-/* line 105, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 109, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal pre code {
   font-size: 120%;
   padding: 10px 20px;
@@ -1953,7 +1955,7 @@ body {
 /*********************************************
  * LINKS
  *********************************************/
-/* line 115, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 119, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal a:not(.image) {
   color: #6fb3d2;
   text-decoration: none;
@@ -1963,13 +1965,13 @@ body {
   -o-transition: color .15s ease;
   transition: color .15s ease; }
 
-/* line 125, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 129, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal a:not(.image):hover {
   color: #bddcea;
   text-shadow: none;
   border: none; }
 
-/* line 132, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 136, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .roll span:after {
   color: #fff;
   background: #3a92ba; }
@@ -1977,7 +1979,7 @@ body {
 /*********************************************
  * IMAGES
  *********************************************/
-/* line 142, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 146, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal section img {
   margin: 15px 0px;
   background: transparent;
@@ -1989,7 +1991,7 @@ body {
   -o-transition: all .2s linear;
   transition: all .2s linear; }
 
-/* line 156, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 160, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #6fb3d2;
@@ -1998,50 +2000,50 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-/* line 168, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 172, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
   border-right-color: #6fb3d2; }
 
-/* line 173, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 177, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
   border-left-color: #6fb3d2; }
 
-/* line 178, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 182, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
   border-bottom-color: #6fb3d2; }
 
-/* line 183, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 187, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
   border-top-color: #6fb3d2; }
 
-/* line 188, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 192, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #bddcea; }
 
-/* line 192, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 196, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-right.enabled:hover {
   border-left-color: #bddcea; }
 
-/* line 196, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 200, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-up.enabled:hover {
   border-bottom-color: #bddcea; }
 
-/* line 200, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 204, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-down.enabled:hover {
   border-top-color: #bddcea; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
-/* line 209, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 213, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2); }
 
-/* line 212, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 216, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .progress span {
   background: #6fb3d2;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -2053,15 +2055,15 @@ body {
 /*********************************************
  * SLIDE NUMBER
  *********************************************/
-/* line 225, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 229, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .slide-number {
   color: #6fb3d2; }
 
-/* line 230, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 234, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 li.fragment {
   margin-bottom: 0.5em; }
 
-/* line 234, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 238, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .circle {
   display: center;
   width: 250px;
@@ -2076,6 +2078,10 @@ li.fragment {
   border-radius: 99em;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
   -webkit-filter: drop-shadow(5px 5px 5px #222); }
+
+/* line 255, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+.reveal .rounded {
+  border-radius: 35px; }
 /* line 3, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_highlight.scss */
 pre code {
   display: block;
