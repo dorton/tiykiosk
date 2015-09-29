@@ -45,11 +45,13 @@ $selectionBackgroundColor: $base0E;
  *********************************************/
 
 body {
-  background-image: url(/tiykiosk/images/bg1.png);
+
   background-color: $backgroundColor;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+	/* background-image: url(/images/bg1.png); */
+	background-image: url(/tiykiosk/images/bg1.png);
 }
 
 .reveal {
@@ -58,7 +60,9 @@ body {
   font-weight: normal;
   letter-spacing: -0.02em;
   color: $mainColor;
-  background: url(/tiykiosk/images/logo_small.png) no-repeat bottom 10px right 10px;
+	background: url(/tiykiosk/images/logo_small.png) no-repeat bottom 10px right 10px;
+	/* background: url(/images/logo_small.png) no-repeat bottom 10px right 10px; */
+
 }
 
 ::selection {
@@ -245,4 +249,8 @@ li.fragment {
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
   -webkit-filter: drop-shadow(5px 5px 5px #222);
 
+}
+
+.reveal .rounded {
+	border-radius: 35px;
 }
