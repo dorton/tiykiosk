@@ -1882,7 +1882,7 @@ body {
  * TIY theme for reveal.js.
  * Author: Clinton Dreisbach
  */
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
 /* line 6, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 html * {
   color-profile: sRGB;
@@ -1902,7 +1902,7 @@ body {
 
 /* line 58, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal {
-  font-family: "PT Serif", serif;
+  font-family: "Josefin Slab", serif;
   font-size: 46px;
   font-weight: normal;
   letter-spacing: -0.02em;
@@ -1929,7 +1929,7 @@ body {
   margin: 0 0 20px 0;
   color: #ffffff;
   font-weight: bold;
-  font-family: "PT Serif", sans-serif;
+  font-family: "Josefin Slab", serif;
   line-height: 1.2em;
   letter-spacing: 0.02em;
   text-transform: none;
@@ -2081,7 +2081,10 @@ li.fragment {
 
 /* line 255, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .rounded {
-  border-radius: 35px; }
+  border-radius: 35px;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+  border: 2px solid #eee;
+  -webkit-filter: drop-shadow(5px 5px 5px #222); }
 /* line 3, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_highlight.scss */
 pre code {
   display: block;
