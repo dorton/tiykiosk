@@ -27,19 +27,19 @@ Reveal.initialize
   dependencies: [
     {
       # src: "/javascripts/reveal.js/plugin/markdown/marked.js"
-      src: "/tiykiosk/javascripts/reveal.js/plugin/markdown/marked.js"
+      src: "javascripts/reveal.js/plugin/markdown/marked.js"
       condition: ->
         !!document.querySelector("[data-markdown]")
     }
     {
       # src: "/javascripts/reveal.js/plugin/markdown/markdown.js"
-      src: "/tiykiosk/javascripts/reveal.js/plugin/markdown/markdown.js"
+      src: "javascripts/reveal.js/plugin/markdown/markdown.js"
       condition: ->
         !!document.querySelector("[data-markdown]")
     }
     {
       # src: '/javascripts/reveal.js/plugin/highlight/highlight.js'
-      src: '/tiykiosk/javascripts/reveal.js/plugin/highlight/highlight.js'
+      src: 'javascripts/reveal.js/plugin/highlight/highlight.js'
       async: true
       callback: ->
         hljs.initHighlightingOnLoad()
