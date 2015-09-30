@@ -5901,17 +5901,17 @@ var Reveal = (function(){
     transition: Reveal.getQueryHash().transition || "default",
     dependencies: [
       {
-        src: "/tiykiosk/javascripts/reveal.js/plugin/markdown/marked.js",
+        src: "javascripts/reveal.js/plugin/markdown/marked.js",
         condition: function() {
           return !!document.querySelector("[data-markdown]");
         }
       }, {
-        src: "/tiykiosk/javascripts/reveal.js/plugin/markdown/markdown.js",
+        src: "javascripts/reveal.js/plugin/markdown/markdown.js",
         condition: function() {
           return !!document.querySelector("[data-markdown]");
         }
       }, {
-        src: '/tiykiosk/javascripts/reveal.js/plugin/highlight/highlight.js',
+        src: 'javascripts/reveal.js/plugin/highlight/highlight.js',
         async: true,
         callback: function() {
           return hljs.initHighlightingOnLoad();
