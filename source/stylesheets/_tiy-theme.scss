@@ -8,17 +8,17 @@ html * {
 }
 
 @import "colors";
-@import url(http://fonts.googleapis.com/css?family=PT+Serif);
+@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
 
 // Theme settings
-$mainFont: "PT Serif", serif;
+$mainFont: 'Josefin Slab', serif;
 $mainFontSize: 46px;
 $mainColor: $base06;
 $backgroundColor: $base01;
 
 // Headings
 $headingMargin: 0 0 20px 0;
-$headingFont: "PT Serif", sans-serif;
+$headingFont: 'Josefin Slab', serif;
 $headingColor: $base07;
 $headingLineHeight: 1.2em;
 $headingLetterSpacing: 0.02em;
@@ -253,4 +253,8 @@ li.fragment {
 
 .reveal .rounded {
 	border-radius: 35px;
+	box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
+	border: 2px solid #eee;
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+
 }
