@@ -58,7 +58,11 @@ helpers do
     end
 
     def this_week_speaker
-      all_speakers.select { |t| t["date"] >= Time.now.beginning_of_week(start_day = :sunday).strftime('%m/%d/%Y') && Time.now.end_of_week(end_day = :saturday).strftime('%m/%d/%Y') >= t["date"]}.sort_by {|date| date.date}
+
+      all_speakers.select do |t|
+        talk_date = t["date"] || "3000-02-02".to_date.strftime('%m/%d/%Y')
+        talk_date >= Time.now.beginning_of_week(start_day = :sunday).strftime('%m/%d/%Y') && Time.now.end_of_week(end_day = :saturday).strftime('%m/%d/%Y') >= talk_date
+      end.sort_by {|date| date.date}
     end
 
 end
