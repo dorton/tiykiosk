@@ -65,6 +65,19 @@ helpers do
       end.sort_by {|date| date.date}
     end
 
+    def fetch_all_demos
+      json = open("https://tiydemoday.herokuapp.com/api/v1/students").read
+      JSON.parse(json, object_class: OpenStruct)["students"]
+    end
+
+    def all_demos
+      @all_demos ||= fetch_all_demos
+    end
+
+    def demo
+      all_demos.select {|t| t["cohort_id"] == 16 }.sort_by {|lastname| lastname["name"].split(" ").last}
+    end
+
 end
 
 
