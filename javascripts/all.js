@@ -5888,6 +5888,7 @@ var Reveal = (function(){
     progress: false,
     history: true,
     center: true,
+    autoSlide: 10000,
     loop: true,
     autoSlideStoppable: false,
     theme: Reveal.getQueryHash().theme,
