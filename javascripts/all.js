@@ -5881,12 +5881,6 @@ var Reveal = (function(){
     }
 }).call(this);
 (function() {
-  var today;
-
-  today = moment().format('dddd, MMMM Do');
-
-  document.getElementById('today').innerHTML = today;
-
   Reveal.initialize({
     width: "90%",
     height: "100%",
@@ -5894,7 +5888,6 @@ var Reveal = (function(){
     progress: false,
     history: true,
     center: true,
-    autoSlide: 8000,
     loop: true,
     autoSlideStoppable: false,
     theme: Reveal.getQueryHash().theme,
