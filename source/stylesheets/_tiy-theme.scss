@@ -236,8 +236,8 @@ li.fragment {
 
 .reveal .circle {
   display: center;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   margin: 1em auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -257,4 +257,14 @@ li.fragment {
 	border: 2px solid #eee;
 	-webkit-filter: drop-shadow(5px 5px 5px #222);
 
+}
+
+.reveal table th, .reveal table td {
+	vertical-align: middle;
+
+}
+
+.reveal table {
+	align-items: center;
+	margin: 0 auto;
 }
