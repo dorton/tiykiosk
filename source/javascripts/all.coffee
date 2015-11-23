@@ -3,9 +3,9 @@
 #= require moment
 
 # <!-- Sets date using Moment.js -->
-# today = moment().format('dddd, MMMM Do')
-# # document.getElementById('now').innerHTML = now;
-# document.getElementById('today').innerHTML = today
+today = moment().format('dddd, MMMM Do')
+# document.getElementById('now').innerHTML = now;
+document.getElementById('today').innerHTML = today
 
 # <!-- Gets objects from a google doc -->
 
