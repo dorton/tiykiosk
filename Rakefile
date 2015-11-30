@@ -5,3 +5,7 @@ task :deploy do
        system("middleman deploy")
 
 end
+
+task :git do
+  system("lazygit" && "Automatic Git")
+end

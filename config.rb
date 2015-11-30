@@ -44,7 +44,6 @@ helpers do
 
       detail_page = agent.click page.at(".excerpts .excerpt a")
       detail_page.at(".entry-content img")['src']
-
     end
 
     def fetch_speakers

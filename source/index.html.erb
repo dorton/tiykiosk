@@ -12,47 +12,14 @@ title: TIY Houston Announcements
 					<%= image_tag "logo_big.png" %>
 				</section>
 
-        <!-- <section>
-					<h2>Welcome to</h2>
-          <%= image_tag "logo_big.png" %>
-				</section> -->
-
+<!-- About TIY -->
         <section>
-          <h2>About The Iron Yard</h2>
-          <p>
-            The Iron Yard exists to create exceptional growth and mentorship for people and their ideas through tech-focused education.
-          </p>
-          <br>
-          <p>
-            Our educational resources provide a solution at the juncture of supply, demand, business and a broken education system. We are committed to training the highest-quality technology professionals in the world, both in skill and in character.
-          </p>
+          <%= partial "about" %>
         </section>
 
-        <section>
-          <h2>About The Courses</h2>
-        </section>
+<!-- Students -->
 
-        <section>
-          <h3>Back End Engineering - Ruby on Rails</h3>
-          <p>
-            <%= image_tag "http://theironyard.com/images/courses/icons/back-end-engineering-icon.png" %>
-          </p>
-          <p>
-            Back End Engineering focuses on the logic and database needs required to run and scale web applications. Back End products combine databases, APIs, and user interface frameworks. Backend developers deploy fully formed products to the cloud, integrate with online services, and enable mobile and front end applications.
-          </p>
-
-        </section>
-
-        <section>
-          <h3>Front End Engineering - Javascript</h3>
-          <p>
-            <%= image_tag "http://theironyard.com/images/courses/icons/front-end-engineering-icon.png" %>
-          </p>
-          <p>
-            Front End Engineering focuses on creating experiences in web browsers that users see and interact with. The discipline covers a broad area, from web design principles to complex JavaScript applications that manage data. The tools used in Front End Engineering are ubiquitous—no matter the technology used on the Back End, Front-Enders are responsible for delivering the experience and data to the person using the web application.
-          </p>
-        </section>
-
+      <section>
         <section>
           <h2>About The Students</h2>
           <h5>Learn Even More at:</h5>
@@ -64,67 +31,44 @@ title: TIY Houston Announcements
         <% demo.each do |demo| %>
             <%= partial "demo", locals: {demo: demo} %>
         <% end %>
+      </section>
 
+<!-- Announcements  -->
+        <% announcement_partial = partial 'announcements' %>
+        <% if announcement_partial.present? %>
+            <section data-markdown>
+              <%= partial "announcements"%>
+            </section>
+        <% else %>
+        <% end %>
 
+<!-- Meetups worth going this week, if any -->
 
-<!-- Announcments  -->
+        <% unless meetups_worth_this_week.empty? %>
+              <% meetups_worth_this_week.each do |meetup| %>
+                  <%= partial "meetupworthit", locals: {meetup: meetup} %>
+              <% end %>
+        <% end %>
 
-<!-- <section data-markdown>
+<!-- Guest Speakers -->
 
-  <%= partial "content"%>
-
-</section> -->
-
-<!-- <section>
-  <h2>Mock Interviews</h2>
-  <ul>
-    <li>Date - Tuesday, Nov 5</li>
-    <li>Time - 12:45 pm</li>
-    <li>Where - 675 Bering Dr #725, Houston, TX 77057</li>
-  </ul>
-<br>
-  <p>
-    <h4>Meet in the lobby of the building no later than 12:50.</h4>
-  </p>
-
-</section> -->
-
-
-
-<!-- Meetups at TIY Slide If Any -->
-    <!-- <% unless meetups_this_week.empty? %>
-          <% meetups_this_week.each do |meetup| %>
-              <%= partial "meetup", locals: {meetup: meetup} %>
+        <% unless this_week_speaker.empty? %>
+          <% this_week_speaker.each do |speaker| %>
+              <%= partial "speaker", locals: {speaker: speaker} %>
           <% end %>
-    <% end %> -->
-
-<!-- Meetups worth going this weel If Any -->
-
-<% unless meetups_worth_this_week.empty? %>
-      <% meetups_worth_this_week.each do |meetup| %>
-          <%= partial "meetupworthit", locals: {meetup: meetup} %>
-      <% end %>
-<% end %>
-
-<!-- Speakers -->
-
-  <% unless this_week_speaker.empty? %>
-      <% this_week_speaker.each do |speaker| %>
-          <%= partial "speaker", locals: {speaker: speaker} %>
-      <% end %>
-    <% end %>
+        <% end %>
 
 
 
 <!-- Wifi -->
-    <section>
-      <%= image_tag "wifi.png", :class => "rounded" %>
-    </section>
+        <section>
+          <%= image_tag "wifi.png", :class => "rounded" %>
+        </section>
 
 <!-- Comics -->
-    <section>
-      <%= image_tag comic_url, :class => "rounded" %>
-    </section>
+        <section>
+          <%= image_tag comic_url, :class => "rounded" %>
+        </section>
 
 
 
