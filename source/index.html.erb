@@ -30,6 +30,17 @@ title: TIY Houston Announcements
       </section>
     <% else %>
     <% end %>
+<!-- Meetups @ TIY this week, if any -->
+<% unless meetups_this_week.empty? %>
+  <section>
+  <h3>Meetups @TIY This Week</h3>
+    <ul>
+      <% meetups_this_week.each do |meetup| %>
+        <li><h4><%= meetup.group.name %> - <%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %> - <em>"<%= meetup.name %>"</em></h4></li>
+      <% end %>
+    </ul>
+    </section>
+<% end %>
 <!-- Meetups worth going this week, if any -->
     <% unless meetups_worth_this_week.empty? %>
       <% meetups_worth_this_week.each do |meetup| %>
