@@ -1882,16 +1882,21 @@ body {
  * TIY theme for reveal.js.
  * Author: Clinton Dreisbach
  */
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
 /* line 6, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 html * {
   color-profile: sRGB;
   rendering-intent: auto; }
 
+@font-face {
+  font-family: 'TisaPro';
+  src: url("TisaPro.eot");
+  src: url("TisaPro.eot?#iefix") format("embedded-opentype"), url("TisaPro.woff2") format("woff2"), url("TisaPro.woff") format("woff"), url("TisaPro.ttf") format("truetype"), url("TisaPro.svg#TisaPro") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
-/* line 48, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 47, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 body {
   background-color: #303030;
   background-repeat: no-repeat;
@@ -1900,9 +1905,9 @@ body {
   /* background-image: url(/images/bg1.png); */
   background-image: url(/tiykiosk/images/bg1.png); }
 
-/* line 58, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 57, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal {
-  font-family: "Josefin Slab", serif;
+  font-family: "TisaPro";
   font-size: 46px;
   font-weight: normal;
   letter-spacing: -0.02em;
@@ -1910,7 +1915,7 @@ body {
   background: url(/tiykiosk/images/logo_small.png) no-repeat bottom 10px right 10px;
   /* background: url(/images/logo_small.png) no-repeat bottom 10px right 10px; */ }
 
-/* line 69, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 68, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 ::selection {
   color: #fff;
   background: #d381c3;
@@ -1919,7 +1924,7 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
-/* line 79, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 78, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal h1,
 .reveal h2,
 .reveal h3,
@@ -1929,24 +1934,24 @@ body {
   margin: 0 0 20px 0;
   color: #ffffff;
   font-weight: bold;
-  font-family: "Josefin Slab", serif;
+  font-family: "TisaPro";
   line-height: 1.2em;
   letter-spacing: 0.02em;
   text-transform: none;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
-/* line 97, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 96, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal h1 {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2); }
 
 /*********************************************
  * CODE
  *********************************************/
-/* line 105, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 104, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal code {
   font-family: "Ubuntu Mono", monospace; }
 
-/* line 109, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 108, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal pre code {
   font-size: 120%;
   padding: 10px 20px;
@@ -1955,7 +1960,7 @@ body {
 /*********************************************
  * LINKS
  *********************************************/
-/* line 119, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 118, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal a:not(.image) {
   color: #6fb3d2;
   text-decoration: none;
@@ -1965,13 +1970,13 @@ body {
   -o-transition: color .15s ease;
   transition: color .15s ease; }
 
-/* line 129, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 128, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal a:not(.image):hover {
   color: #bddcea;
   text-shadow: none;
   border: none; }
 
-/* line 136, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 135, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .roll span:after {
   color: #fff;
   background: #3a92ba; }
@@ -1979,7 +1984,7 @@ body {
 /*********************************************
  * IMAGES
  *********************************************/
-/* line 146, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 145, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal section img {
   margin: 15px 0px;
   background: transparent;
@@ -1991,7 +1996,7 @@ body {
   -o-transition: all .2s linear;
   transition: all .2s linear; }
 
-/* line 160, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 159, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
   border-color: #6fb3d2;
@@ -2000,50 +2005,50 @@ body {
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-/* line 172, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 171, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
   border-right-color: #6fb3d2; }
 
-/* line 177, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 176, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
   border-left-color: #6fb3d2; }
 
-/* line 182, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 181, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
   border-bottom-color: #6fb3d2; }
 
-/* line 187, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 186, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
   border-top-color: #6fb3d2; }
 
-/* line 192, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 191, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-left.enabled:hover {
   border-right-color: #bddcea; }
 
-/* line 196, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 195, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-right.enabled:hover {
   border-left-color: #bddcea; }
 
-/* line 200, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 199, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-up.enabled:hover {
   border-bottom-color: #bddcea; }
 
-/* line 204, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 203, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .controls div.navigate-down.enabled:hover {
   border-top-color: #bddcea; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
-/* line 213, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 212, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2); }
 
-/* line 216, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 215, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .progress span {
   background: #6fb3d2;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -2055,15 +2060,15 @@ body {
 /*********************************************
  * SLIDE NUMBER
  *********************************************/
-/* line 229, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 228, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .slide-number {
   color: #6fb3d2; }
 
-/* line 234, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 233, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 li.fragment {
   margin-bottom: 0.5em; }
 
-/* line 238, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 237, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .circle {
   display: center;
   width: 250px;
@@ -2079,7 +2084,7 @@ li.fragment {
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
   -webkit-filter: drop-shadow(5px 5px 5px #222); }
 
-/* line 255, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 254, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .demo_circle {
   display: center;
   width: 150px;
@@ -2095,18 +2100,18 @@ li.fragment {
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
   -webkit-filter: drop-shadow(5px 5px 5px #222); }
 
-/* line 272, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 271, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal .rounded {
   border-radius: 35px;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
   border: 2px solid #eee;
   -webkit-filter: drop-shadow(5px 5px 5px #222); }
 
-/* line 280, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 279, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal table th, .reveal table td {
   vertical-align: middle; }
 
-/* line 285, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 284, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal table {
   align-items: center;
   margin: 0 auto; }
