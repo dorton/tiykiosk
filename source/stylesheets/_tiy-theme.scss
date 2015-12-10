@@ -8,17 +8,16 @@ html * {
 }
 
 @import "colors";
-@import url(https://fonts.googleapis.com/css?family=Josefin+Slab);
-
+@import "font";
 // Theme settings
-$mainFont: 'Josefin Slab', serif;
+$mainFont: 'TisaPro';
 $mainFontSize: 46px;
 $mainColor: $base06;
 $backgroundColor: $base01;
 
 // Headings
 $headingMargin: 0 0 20px 0;
-$headingFont: 'Josefin Slab', serif;
+$headingFont: 'TisaPro';
 $headingColor: $base07;
 $headingLineHeight: 1.2em;
 $headingLetterSpacing: 0.02em;
