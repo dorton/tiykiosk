@@ -23,12 +23,15 @@ title: TIY Houston Announcements
       <% end %>
     </section>
 <!-- Announcements, if any  -->
-    <% announcement_partial = partial 'announcements' %>
-    <% if announcement_partial.present? %>
-      <section data-markdown>
-        <%= partial "announcements"%>
-      </section>
-    <% else %>
+    <% unless this_week_announcements.empty? %>
+    <section>
+      <h3>Announcements</h3>
+      <table>
+        <% this_week_announcements.each do |announcement| %>
+            <%= partial "announcements", locals: {announcement: announcement} %>
+        <% end %>
+      </table>
+    </section>
     <% end %>
 <!-- Meetups @ TIY this week, if any -->
 <% unless meetups_this_week.empty? %>

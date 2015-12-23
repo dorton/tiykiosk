@@ -10,6 +10,19 @@ require 'google_drive'
 
 helpers do
 
+    def fetch_announcements
+      json = open("https://tiyspeakers.herokuapp.com/api/v1/announcements").read
+      JSON.parse(json, object_class: OpenStruct)["announcements"]
+    end
+
+    def all_announcements
+      @all_announcements ||= fetch_announcements
+    end
+
+    def this_week_announcements
+      all_announcements.select {|t| t["date"] >= Time.now.beginning_of_week(start_day = :sunday) && Time.now.end_of_week(end_day = :saturday) >= t["date"] }
+    end
+
     def fetch_meetups
         json = open("https://api.meetup.com/2/events?&sign=true&photo-host=public&venue_id=23753432&page=20&key=326e493f58383976434f5963243a5e&callback=?").read
         JSON.parse(json, object_class: OpenStruct)["results"]

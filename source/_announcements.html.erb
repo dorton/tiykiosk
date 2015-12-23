@@ -1,1 +1,8 @@
-
+<tr>
+  <td>
+    <h4><%= Date.parse(announcement.date).strftime('%a, %b %d').to_s %></h4>
+  </td>
+  <td>
+    <h4><%= announcement.info %></h4>
+  </td>
+</tr>
