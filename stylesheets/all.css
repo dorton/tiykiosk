@@ -2107,14 +2107,25 @@ li.fragment {
   border: 2px solid #eee;
   -webkit-filter: drop-shadow(5px 5px 5px #222); }
 
-/* line 279, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
-.reveal table th, .reveal table td {
-  vertical-align: middle; }
-
-/* line 284, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+/* line 281, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
 .reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
   align-items: center;
   margin: 0 auto; }
+
+/* line 289, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+.reveal table th {
+  font-weight: bold; }
+
+/* line 293, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_tiy-theme.scss */
+.reveal table th,
+.reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid;
+  vertical-align: middle; }
 /* line 3, /Users/dorton/githubprojects/tiykiosk/source/stylesheets/_highlight.scss */
 pre code {
   display: block;
