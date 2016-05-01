@@ -87,7 +87,7 @@ helpers do
     end
 
     def demo
-      all_demos.select {|t| t["cohort_id"] == 16 }.sort_by {|lastname| lastname["name"].split(" ").last}
+      all_demos.select {|t| t["cohort_id"] == 18 }.sort_by {|lastname| lastname["name"].split(" ").last}
     end
 
 end
