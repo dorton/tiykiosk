@@ -4,11 +4,13 @@ title: TIY Houston Announcements
 <div class="reveal">
 <!-- Any section element inside of this container is displayed as a slide -->
   <div class="slides">
+
 <!-- Welcome Slide -->
 		<section>
 			<h2><div id='today'></div></h2>
 			<%= image_tag "logo_big.png" %>
 		</section>
+
 <!-- Announcements, if any  -->
     <% unless this_week_announcements.empty? %>
     <section>
@@ -20,62 +22,74 @@ title: TIY Houston Announcements
       </table>
     </section>
     <% end %>
+
 <!-- Halfway Celebration Slide -->
     <!-- <section>
       <%= partial "halfwaybbq" %>
     </section> -->
+
 <!-- Field Trip -->
-        <!-- <section>
-          <%= partial "fieldtrip" %>
-        </section> -->
-<!-- Field Trip -->
-        <!-- <section>
-          <%= partial "headshots" %>
-        </section> -->
+    <!-- <section>
+      <%= partial "fieldtrip" %>
+    </section> -->
+
+<!-- Head Shots -->
+    <!-- <section>
+      <%= partial "headshots" %>
+    </section> -->
+
 <!-- Meetups @ TIY this week, if any -->
-<% unless meetups_this_week.empty? %>
-  <section>
-  <h3>Meetups @TIY This Week</h3>
-    <ul>
-      <% meetups_this_week.each do |meetup| %>
-        <li><h4><%= meetup.group.name %> - <%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %> - <em>"<%= meetup.name %>"</em></h4></li>
-      <% end %>
-    </ul>
-    </section>
-<% end %>
+    <% unless meetups_this_week.empty? %>
+      <section>
+      <h3>Meetups @TIY This Week</h3>
+        <ul>
+          <% meetups_this_week.each do |meetup| %>
+            <li><h4><%= meetup.group.name %> - <%= Time.at(meetup.time/1000).strftime('%a, %b %d - %l:%M%p') %> - <em>"<%= meetup.name %>"</em></h4></li>
+          <% end %>
+        </ul>
+        </section>
+    <% end %>
+
 <!-- Meetups worth going this week, if any -->
     <% unless meetups_worth_this_week.empty? %>
       <% meetups_worth_this_week.each do |meetup| %>
           <%= partial "meetupworthit", locals: {meetup: meetup} %>
       <% end %>
     <% end %>
+
 <!-- Guest Speakers, if any -->
     <% unless this_week_speaker.empty? %>
       <% this_week_speaker.each do |speaker| %>
           <%= partial "speaker", locals: {speaker: speaker} %>
       <% end %>
     <% end %>
-<!-- Students -->
+
+<!-- Students after demo day-->
     <!-- <section>
       <%= partial "students" %>
     </section> -->
-<!-- About TIY -->
+
+<!-- Iron Pints -->
     <section>
-      <%= partial "about" %>
-    </section>
-    <section>
-      <h3>Join Us for Iron Pints</h3>
+      <h3>Join Us for Iron Pints™</h3>
       <%= image_tag "iron_pints.png", height: '400', width: '400' %>
-      <h3>Fridays from 3-4pm!</h3>
+      <h3>Fridays 3-4pm!</h3>
     </section>
 
 <!-- Wifi -->
     <section>
       <%= image_tag "wifi.png", :class => "rounded" %>
     </section>
+
 <!-- Comics -->
     <section>
       <%= image_tag comic_url, :class => "rounded" %>
     </section>
+
+<!-- About TIY -->
+    <section>
+      <%= partial "about" %>
+    </section>
+    
   </div>
 </div>
